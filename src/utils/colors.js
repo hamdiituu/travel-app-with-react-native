@@ -1,9 +1,5 @@
-const colors = {
-  Gray: '#D1D3D2',
-  DarkGray: '#676767',
-  Orange: '#F35D38',
-  Black: '#0C0D0E',
-  White: '#FBFCFE',
-};
-
-export default colors;
+export const GRAY = '#D1D3D2';
+export const DARKGRAY = '#676767';
+export const ORANGE = '#F35D38';
+export const BLACK = '#0C0D0E';
+export const WHITE = '#FBFCFE';

@@ -1,8 +1,8 @@
 import {StyleSheet} from 'react-native';
-import Colors from '../utils/colors';
+import * as Colors from '../utils/colors';
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: Colors.White,
+    backgroundColor: Colors.WHITE,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
   },
