@@ -6,20 +6,19 @@ import * as Colors from '../utils/colors';
 
 const Tab = createBottomTabNavigator();
 
-const TabNavigator = () => {
-  return (
-    <Tab.Navigator
-      tabBarOptions={{
-        style: styles.tabBar,
-        activeTintColor: Colors.ORANGE,
-        activeBackgroundColor: Colors.GRAY,
-        showLabel: false,
-      }}>
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Liked" component={Liked} />
-      <Tab.Screen name="Profile" component={Profile} />
-    </Tab.Navigator>
-  );
-};
+const TabNavigator = () => (
+  <Tab.Navigator
+    tabBarOptions={{
+      style: styles.tabBar,
+      activeTintColor: Colors.ORANGE,
+      activeBackgroundColor: Colors.GRAY,
+      showLabel: false,
+    }}
+    initialRouteName="Home">
+    <Tab.Screen name="Home" component={Home} />
+    <Tab.Screen name="Liked" component={Liked} />
+    <Tab.Screen name="Profile" component={Profile} />
+  </Tab.Navigator>
+);
 
 export default TabNavigator;
