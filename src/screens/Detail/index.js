@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   ImageBackground,
   View,
@@ -16,6 +16,7 @@ import {
 import * as Colors from '../../utils/colors';
 
 const Detail = ({navigation}) => {
+  const [like, setLike] = useState(false);
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -23,7 +24,7 @@ const Detail = ({navigation}) => {
         imageStyle={styles.backgroundImageStyle}
         source={require('../../../assets/images/canyon.png')}>
         <SafeAreaView style={styles.headerBarWrapper}>
-          <TouchableOpacity onPress={()=>navigation.goBack()}>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
             <LeftArrowIcon width={24} height={24} fill={Colors.WHITE} />
           </TouchableOpacity>
         </SafeAreaView>
@@ -35,7 +36,13 @@ const Detail = ({navigation}) => {
           </View>
         </View>
         <View style={styles.descriptionIconWrapper}>
-          <LikeIcon fill={Colors.ORANGE} width={24} height={24} />
+          <TouchableOpacity onPress={() => setLike(!like)}>
+            <LikeIcon
+              fill={like ? Colors.ORANGE : Colors.GRAY}
+              width={24}
+              height={24}
+            />
+          </TouchableOpacity>
         </View>
         <ScrollView style={styles.descriptionWrapper}>
           <Text style={styles.descriptionTitle}>Description</Text>
