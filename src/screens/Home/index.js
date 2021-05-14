@@ -21,18 +21,20 @@ import {
 import * as Colors from '../../utils/colors';
 import styles from './style';
 const Home = () => {
+  const goToDetail = () => {};
+
   return (
     <View style={styles.continer}>
+      <SafeAreaView>
+        <View style={styles.menuWrapper}>
+          <MenuIcon fill={Colors.BLACK} style={styles.menuIcon} />
+          <Image
+            style={styles.personImage}
+            source={require('../../../assets/images/person.png')}
+          />
+        </View>
+      </SafeAreaView>
       <ScrollView>
-        <SafeAreaView>
-          <View style={styles.menuWrapper}>
-            <MenuIcon fill={Colors.BLACK} style={styles.menuIcon} />
-            <Image
-              style={styles.personImage}
-              source={require('../../../assets/images/person.png')}
-            />
-          </View>
-        </SafeAreaView>
         <View style={styles.discoverWrapper}>
           <Text style={styles.discoverTitle}>Discover</Text>
           <View style={styles.discoverCategoriesWrapper}>
@@ -80,54 +82,79 @@ const Home = () => {
         <View style={styles.activitesWrapper}>
           <Text style={styles.activitesTitle}>Actives</Text>
           <View style={styles.activitesItemsWrapper}>
-            <View style={styles.activitesItemWrapper}>
+            <TouchableOpacity style={styles.activitesItemWrapper}>
               <KayakIcon
                 width={30}
                 height={30}
                 style={styles.activitesItemIcon}
               />
               <Text style={styles.activitesItemTitle}>KAYAK</Text>
-            </View>
-            <View style={styles.activitesItemWrapper}>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.activitesItemWrapper}>
               <HideIcon
                 width={30}
                 height={30}
                 style={styles.activitesItemIcon}
               />
               <Text style={styles.activitesItemTitle}>HIKE</Text>
-            </View>
-            <View style={styles.activitesItemWrapper}>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.activitesItemWrapper}>
               <WaterSkIcon
                 width={30}
                 height={30}
                 style={styles.activitesItemIcon}
               />
               <Text style={styles.activitesItemTitle}>WATER SKI</Text>
-            </View>
-            <View style={styles.activitesItemWrapper}>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.activitesItemWrapper}>
               <SpaIcon
                 width={30}
                 height={30}
                 style={styles.activitesItemIcon}
               />
               <Text style={styles.activitesItemTitle}>SPA</Text>
-            </View>
-            <View style={styles.activitesItemWrapper}>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.activitesItemWrapper}>
               <TennisIcon
                 width={30}
                 height={30}
                 style={styles.activitesItemIcon}
               />
               <Text style={styles.activitesItemTitle}>TENNIS</Text>
-            </View>
-            <View style={styles.activitesItemWrapper}>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.activitesItemWrapper}>
               <BikeIcon
                 width={40}
                 height={30}
                 style={styles.activitesItemIcon}
               />
               <Text style={styles.activitesItemTitle}>CYCLE</Text>
-            </View>
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View style={styles.learnMoreWrapper}>
+          <Text style={styles.learnMoreTitle}>Learn More</Text>
+          <View style={styles.learnMoreItemsWrapper}>
+            <TouchableOpacity
+              style={[styles.learnMoreItemsWrapper, {marginLeft: 20}]}>
+              <ImageBackground
+                style={styles.learnMoreItemImage}
+                imageStyle={styles.learnMoreItemImageStyle}
+                source={require('../../../assets/images/boatbeach.png')}>
+                <Text style={styles.learnMoreItemText}>
+                  Snorkelling in Mexico
+                </Text>
+              </ImageBackground>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.learnMoreItemsWrapper, {marginLeft: 20}]}>
+              <ImageBackground
+                style={styles.learnMoreItemImage}
+                imageStyle={styles.learnMoreItemImageStyle}
+                source={require('../../../assets/images/beach.png')}>
+                <Text style={styles.learnMoreItemText}>Beach in USA</Text>
+              </ImageBackground>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>

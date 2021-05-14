@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: 20,
     marginTop: 10,
+    paddingBottom: 20,
   },
   menuIcon: {},
   personImage: {
@@ -100,6 +101,37 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontFamily: 'Lato-Bold',
     color: Colors.GRAY,
+  },
+  learnMoreWrapper: {
+    marginTop: 30,
+    marginBottom: 50,
+  },
+  learnMoreTitle: {
+    fontFamily: 'Lato-Bold',
+    fontSize: 28,
+    marginHorizontal: 20,
+  },
+  learnMoreItemsWrapper: {
+    marginTop: 20,
+    flexDirection: 'row',
+  },
+  learnMoreItemWrapper: {
+    marginLeft: 40,
+  },
+  learnMoreItemImage: {
+    width: 170,
+    height: 180,
+    justifyContent: 'flex-end',
+    paddingHorizontal: 10,
+    paddingVertical: 20,
+  },
+  learnMoreItemImageStyle: {
+    borderRadius: 20,
+  },
+  learnMoreItemText: {
+    fontFamily: 'Lato-Bold',
+    fontSize: 18,
+    color: Colors.WHITE,
   },
 });
 
