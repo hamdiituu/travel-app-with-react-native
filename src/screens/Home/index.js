@@ -1,27 +1,30 @@
 import React from 'react';
 import {
   Image,
-  View,
+  ImageBackground,
   SafeAreaView,
   ScrollView,
   Text,
   TouchableOpacity,
-  ImageBackground,
+  View,
 } from 'react-native';
 import {
-  Menu as MenuIcon,
-  Location as LocationIcon,
-  Kayak as KayakIcon,
+  Bike as BikeIcon,
   Hide as HideIcon,
-  WaterSk as WaterSkIcon,
+  Kayak as KayakIcon,
+  Location as LocationIcon,
+  Menu as MenuIcon,
   Spa as SpaIcon,
   Tennis as TennisIcon,
-  Bike as BikeIcon,
+  WaterSk as WaterSkIcon,
 } from '../../components/icons';
 import * as Colors from '../../utils/colors';
 import styles from './style';
-const Home = () => {
-  const goToDetail = () => {};
+
+const Home = ({navigation}) => {
+  const goToDetail = () => {
+    navigation.navigate('Detail');
+  };
 
   return (
     <View style={styles.continer}>
@@ -49,6 +52,7 @@ const Home = () => {
           </View>
           <View style={styles.discoverItemsWrapper}>
             <TouchableOpacity
+              onPress={goToDetail}
               style={[styles.discoverItemWrapper, {marginLeft: 20}]}>
               <ImageBackground
                 style={styles.discoverItemImage}
@@ -63,7 +67,9 @@ const Home = () => {
                 </View>
               </ImageBackground>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.discoverItemWrapper}>
+            <TouchableOpacity
+              onPress={goToDetail}
+              style={styles.discoverItemWrapper}>
               <ImageBackground
                 style={styles.discoverItemImage}
                 imageStyle={styles.discoverItemImageStyle}
