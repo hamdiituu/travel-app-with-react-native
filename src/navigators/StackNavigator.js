@@ -6,7 +6,7 @@ import {Detail} from '../screens';
 const Stack = createStackNavigator();
 
 const StackNavigator = () => (
-  <Stack.Navigator>
+  <Stack.Navigator initialRouteName={'Home'}>
     <Stack.Screen
       name="TabNavigator"
       component={TabNavigator}
