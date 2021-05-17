@@ -14,14 +14,5 @@
 
 **Application Screens**
 
-_Home Page_
+![](./images/app.png)
 
-![](./images/home.png)
-
-_Detail Unlike Page_
-
-![](./images/detail_unlike.png)
-
-_Detail Liked Page_
-
-![](./images/detail_liked.png)
